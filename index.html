@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta Aqui</title>
+    <link rel="stylesheet" href="Assets/styles/main.css">
+    <link rel="icon" href="Assets/img/favicon_transparent.png" type="image/x-icon">
+</head>
+<body>
+    <section id="nav-menu">
+        <nav>
+            <img class="logo-img" src="Assets/img/logo.png" alt="">
+            <ul>
+                <li id="home" class="li-itens">Home</li>
+                <li id="sobre" class="li-itens">Sobre</li>
+                <li id="coleta" class="li-itens">Pontos de Coleta</li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <article>
+            <div class="main-text">
+                <h1>Encontre um ponto de coleta perto de você!</h1>
+                <p>Cuide da natureza: ao descartar seus resíduos corretamente, você protege o meio ambiente, evita a poluição e ajuda a garantir um futuro mais sustentável para as próximas gerações. Faça a diferença, adote práticas responsáveis!</p>
+                <div class="div-btn-buscar">
+                    <button class="btn-buscar" onclick="consultaPontoColeta()">Buscar</button>
+                </div>
+            </div>
+            <div class="main-img">
+                <img class="img-main-coleta" src="Assets/img/ilustracao.jpg" alt="">
+            </div>
+        </article>
+    </section>
+    <div id="loading" style="display: none;"></div>
+    <section class="section-sobre">
+        <div class="titulo-sobre">
+            <h1>Nossa Missão: Um Mundo Sustentável</h1>
+        </div>
+        <div class="texto-sobre">
+            <p>
+                Nossa missão é clara: <span class="span-color"> o mundo mais limpo e sustentável.</span> Através do nosso site, facilitamos sua busca por pontos
+                de coleta de óleo e lâmpadas usadas, <span class="span-color">ações ambientais simples e impactantes.</span>
+            </p>
+            <p>
+                Acreditamos no poder das pequenas ações individuais para causar mudanças globais. Ao encontrar e utilizar esses pontos
+                de coleta, você contribui para a<span class="span-color"> redução da poluição, a preservação de recursos </span> e a construção de um planeta mais verde.
+            </p>
+            <p>
+                Junte-se a nós nesta jornada de sustentabilidade, onde <span class="span-color">cada gesto é significativo.</span> Seja parte da solução para um futuro mais limpo e saudável. Unidos, estamos construindo um mundo sustentável e harmonioso para as gerações vindouras. Faça parte da mudança e ajude-nos a criar um planeta melhor!
+            </p>
+        </div>
+        <div>
+
+        </div>
+    </section>
+    <section class="section-resultados">
+        <h1>Encontre um ponto de coleta próximo</h1>
+        <div class="botoes-pesquisa">
+            <button onclick="consultaColetaOleo()" class="btn-consulta">COLETA DE ÓLEO</button>
+            <button onclick="consultaColetaLampada()" class="btn-consulta">COLETA DE LAMPADA</button>
+        </div>
+        
+        <div style="display: none;" class="resultados-oleo">
+            Coleta de Óleo
+        </div>
+        
+        <div style="display: none;" class="resultados-lampada">
+            Coleta de Lampada
+        </div>
+    </section>
+    <section class="direitos">
+        <p>Copyright © 2023 Coleta Aqui - Todos os direitos reservados</p>
+    </section>
+    <div id="map"></div>
+    <div id="modal" class="modal modal-sucesso" style="display: none;">
+        <img class="img-check" src="Assets/img/yes.png" alt="check">
+        <p>Endereço copiado!</p>
+    </div>
+    <div id="modal-erro" class="modal modal-erro" style="display: none;">
+        <img class="img-check" src="Assets/img/cruz.png" alt="erro">
+        <p id="texto-erro"></p>
+    </div>
+    <script src="Assets/js/componente.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcD6Q3ar7jkDr47QziwCIMKOO9LS5nsFk&callback=initMap&libraries=places">
+    </script>
+    <script src="Assets/js/Maps.js"></script>
+</body>
+</html>
