@@ -80,7 +80,7 @@ async function consultaColetaOleo(){
         for (var i = 0; i < oleo.length; i++) {
             var item = oleo[i];
             let destino = item.endereco.replaceAll(" ", "+");
-            const urlGoogleMaps = `https://www.google.com/maps?q=${destino}`;
+            const urlGoogleMaps = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destino)}`;
 
             // Construir o componente HTML com base nos dados do objeto
             let componente = `
